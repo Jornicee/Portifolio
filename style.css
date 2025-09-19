@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(-45deg, #000000, #0a66c2);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite; 
+  background-attachment: fixed;
+  text-align: center;
+  transition: transform 0.5s, color 0.5s;
+}
+
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.toggle-mode {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: inherit;
+  transition: transform 0.3s;
+}
+
+.toggle-mode:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s, border 0.4s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.hello {
+  margin-top: -0.5em;
+  font-size: 2em;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    margin: 15px 0 50px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: color 0.4s;
+} 
+
+.botao{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    width: 40%;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s opacity 0.3s;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.instagram {
+  background: linear-gradient(45deg, #fd1d1d, #e1306c, #f77737);
+}
+
+.github {
+  background: #000;
+}
+
+.linkedin {
+  background: #0a66c2;
+}
+
+.container-botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    gap: 1.2em;
+    margin-top: 3em;
+    cursor: pointer;
+}
+
+.icon a i {
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.icon a:hover i {
+    color: white;
+    transform: scale(1.2);
+}
+
+.insta a i{
+  color:  #fd1d1d;
+}
+
+.git a i{
+  color: #000;
+}
+
+.linke a i {
+  color: #0a66c2;
+}
+
+body.light-mode {
+  background: linear-gradient(-45deg, #f77737, #fff);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #000;
+}
+
+h2 {
+  margin-top: 2em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+body.light-mode h1 {
+  color: #000;
+}
+
+body.light-mode h2 {
+  color: #000;
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding: 40px;
+  }
+
+  img {
+    margin-top: -1em;
+    width: 200px;
+    height: 200px;
+  }
+
+  .hello {
+    font-size: 1.2em;
+  }
+
+  .botao {
+    font-size: 1.1em;
+    padding: 14px 22px;
+    margin: 8px;
+  }
+
+  .icon {
+    gap: 2em;
+  }
+
+  .icon a i {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 768px) {
+  img {
+    margin-top: -2em;
+    width: 180px;
+    height: 180px;
+  }
+
+  .hello {
+    margin-top: -0.5em;
+    font-size: 2em;
+  }
+
+  .botao {
+    font-size: 1.05em;
+    padding: 14px 18px;
+  }
+}
+
+@media (max-width: 600px){
+  img {
+    margin-top: -2em;
+  }
+
+  .hello {
+    margin-top: 0.1em;
+    font-size: 2em;
+  }
+  
+  .botao {
+    width: 90%; 
+    padding: 15px 10px;
+    font-size: 1em;
+  }
+
+  .icon a i {
+    font-size: 1.8em;
+  }
+
+  .icon a {
+    margin-top: 9%;
+  }
+  
+  .icon {
+    margin-top: 3em;
+    gap: 1.2em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+}
