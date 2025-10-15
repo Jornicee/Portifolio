@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 html, body {
-    height: 100%;
+    height: 50%;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -42,6 +42,7 @@ img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    border: 0.1em solid #000000;
     object-fit: cover;
     transition: transform 0.4s, border 0.4s;
 }
@@ -238,3 +239,4 @@ body.light-mode h2 {
     font-size: 1em;
   }
 }
+
